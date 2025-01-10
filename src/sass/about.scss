@@ -1,0 +1,56 @@
+@use "./variables.scss" as *;
+
+.about-company {
+  padding: 30px 0;
+  background-color: #302219;
+  .card {
+    background-color: #342019;
+    border: 1px solid $wheat-color;
+    border-radius: 20px;
+    .card-body {
+      .card-title {
+        color: $secondary-color;
+      }
+      .card-text {
+        color: #e0e0e0;
+        opacity: 0.7;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+      .btn-about {
+        display: flex;
+        width: fit-content;
+        border-radius: 50px;
+        background-color: $secondary-color;
+        color: $main-color;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+          color: $secondary-color;
+          background-color: $main-color;
+          border: 1px solid $wheat-color;
+        }
+      }
+    }
+  }
+  .company-logo {
+    width: 70%;
+    height: 95%;
+    opacity: 0.7;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  .about-company {
+    .card {
+      .card-body {
+        .card-text {
+          font-size: 14px;
+        }
+      }
+    }
+    .company-logo {
+      width: 100%;
+    }
+  }
+}

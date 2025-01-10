@@ -1,4 +1,5 @@
 @use "./variables.scss" as *;
+@use "./about.scss";
 
 @font-face {
   font-family: "cairoFont";
@@ -10,7 +11,7 @@
 }
 
 *::selection {
-  background-color: #f5deb3;
+  background-color: $wheat-color;
   color: $main-color;
 }
 
@@ -28,7 +29,7 @@ body {
 nav {
   background-color: $main-color;
   // border-bottom: 2px solid #4f3728;
-  border-bottom: 1px solid #f5deb3;
+  border-bottom: 1px solid $wheat-color;
 }
 
 .navbar-brand {
@@ -111,7 +112,7 @@ nav {
         margin: 20px 5px 0px 0px;
         // background-color: $secondary-color;
         &.active {
-          background-color: #f5deb3;
+          background-color: $wheat-color;
         }
       }
     }
@@ -181,7 +182,7 @@ section {
       position: absolute;
       // left: -26px;
       left: -15px;
-      color: #f5deb3;
+      color: $wheat-color;
       top: 50%;
       transform: translateY(-50%);
       font-size: 40px;
@@ -205,7 +206,7 @@ section {
     border-radius: 20px;
     background-color: #2a2016;
     padding: 1px;
-    border: 1px solid #f5deb3;
+    border: 1px solid $wheat-color;
     margin-bottom: 15px;
     // width: calc(100% / 3);
     img {
@@ -235,7 +236,7 @@ section {
         &:hover {
           color: $secondary-color;
           background-color: $main-color;
-          border: 1px solid #f5deb3;
+          border: 1px solid $wheat-color;
         }
       }
     }
@@ -268,11 +269,11 @@ section {
             width: 55px;
             line-height: 55px;
             border-radius: 50%;
-            background-color: #f5deb3;
+            background-color: $wheat-color;
             color: #392719;
             text-align: center;
             transition: all 0.3s ease-in;
-            border: 1px solid #f5deb3;
+            border: 1px solid $wheat-color;
             &:hover {
               color: $secondary-color;
               background-color: transparent;
@@ -292,7 +293,7 @@ section {
         margin-left: 6px;
         &:focus {
           box-shadow: 0 0 0 0.25rem #f5deb2;
-          border: 1px solid #f5deb3;
+          border: 1px solid $wheat-color;
         }
       }
       .invalid-feedback {
@@ -302,7 +303,7 @@ section {
       button {
         background-color: $secondary-color;
         color: $main-color;
-        border: 1px solid #f5deb3;
+        border: 1px solid $wheat-color;
         border-radius: 3px;
         transition: all 0.3s ease-in;
         &:hover {
