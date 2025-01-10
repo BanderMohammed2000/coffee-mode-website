@@ -70,7 +70,7 @@ module.exports = {
         exclude: /fonts/,
         // type: "asset/resource",
         generator: {
-          filename: "images/[name][ext]",
+          filename: "images/[path][name][ext]",
         },
       },
 
