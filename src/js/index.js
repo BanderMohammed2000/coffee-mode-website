@@ -58,3 +58,27 @@ import "@fortawesome/fontawesome-free/js/all.min";
 //     });
 //   }
 // });
+
+(function () {
+  "use strict";
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var form = document.querySelector(".needs-validation");
+
+  form.addEventListener(
+    "submit",
+    function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      form.classList.add("was-validated");
+    },
+    false
+  );
+})();
+
+var date = new Date();
+var year = date.getFullYear();
+document.getElementById("date").innerHTML = year;
