@@ -66,9 +66,9 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpe?g|jpg|jpeg|gif|webp)$/i,
         exclude: /fonts/,
-        // type: "asset/resource",
+        type: "asset/resource",
         generator: {
           filename: "images/[path][name][ext]",
         },
@@ -114,6 +114,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/about.html",
       filename: "about.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/distributors.html",
+      filename: "distributors.html",
     }),
 
     new MiniCssExtractPlugin({

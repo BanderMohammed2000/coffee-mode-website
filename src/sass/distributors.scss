@@ -1,0 +1,51 @@
+@use "./variables.scss" as *;
+
+#map {
+  height: 250px;
+  width: 100%;
+  .awesome-marker-icon-custom {
+    .svg-inline--fa {
+      vertical-align: -1em;
+    }
+  }
+}
+
+.distributors {
+  background-color: #34261c;
+  .card {
+    background-color: #1d1412;
+    border: 1px solid $wheat-color;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 358px;
+    img {
+      width: 160px;
+      height: 160px;
+    }
+    .card-body {
+      .card-title {
+        color: $secondary-color;
+      }
+      .card-text {
+        color: #e0e0e0;
+        opacity: 0.7;
+        font-size: 14px;
+        span {
+          color: $wheat-color;
+        }
+      }
+    }
+  }
+}
+
+/* ------ Responsive ------*/
+
+@media (max-width: 575.98px) {
+  .distributors {
+    .card {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

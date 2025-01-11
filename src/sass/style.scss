@@ -1,5 +1,6 @@
 @use "./variables.scss" as *;
 @use "./about.scss";
+@use "./distributors.scss";
 
 @font-face {
   font-family: "cairoFont";
@@ -362,6 +363,13 @@ section {
 }
 
 @media (max-width: 767.98px) {
+  .products {
+    .card {
+      width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   .footer {
     .social-media {
       .mail-messages {
@@ -374,6 +382,13 @@ section {
 }
 
 @media (max-width: 575.98px) {
+  .products {
+    .card {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   .carousel-top {
     .carousel {
       .carousel-caption {
