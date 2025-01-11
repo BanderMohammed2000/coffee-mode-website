@@ -68,12 +68,12 @@ nav {
       &:last-child {
         width: fit-content;
       }
-      .cart {
-        border: 1px solid $secondary-color;
-        border-radius: 3px;
-        padding: 8px 13px;
-        transition: all 0.3s ease;
-      }
+      // .cart {
+      //   border: 1px solid $secondary-color;
+      //   border-radius: 3px;
+      //   padding: 8px 13px;
+      //   transition: all 0.3s ease;
+      // }
     }
   }
 }
@@ -299,6 +299,7 @@ section {
       .invalid-feedback {
         position: absolute;
         bottom: -26px;
+        text-align: start;
       }
       button {
         background-color: $secondary-color;
