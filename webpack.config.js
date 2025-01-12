@@ -3,11 +3,16 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 module.exports = {
   stats: "errors-only",
-  entry: "./src/js/index.js",
+  entry: {
+    bundle: "./src/index.js",
+    //code splitting
+    "js/animate-fadein": "./src/js/animate-fadein.js",
+    "js/map": "./src/js/map.js",
+  },
   output: {
     publicPath: "/",
     path: path.resolve(__dirname, "build"),
-    filename: "js/bundle.js",
+    filename: "[name].js",
   },
 
   module: {
@@ -109,16 +114,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html",
+      chunks: ["bundle", "js/animate-fadein"],
     }),
 
     new HtmlWebpackPlugin({
       template: "./src/about.html",
       filename: "about.html",
+      chunks: ["bundle"],
     }),
 
     new HtmlWebpackPlugin({
       template: "./src/distributors.html",
       filename: "distributors.html",
+      chunks: ["bundle", "js/map"],
     }),
 
     new MiniCssExtractPlugin({

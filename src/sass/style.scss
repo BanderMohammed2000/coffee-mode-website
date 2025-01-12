@@ -161,9 +161,11 @@ section {
     // position: relative;
     height: 123px;
     .num-section {
+      opacity: 0;
       display: flex;
       align-items: center;
       width: fit-content;
+      transition: all 0.5s ease-in;
       .num-container {
         background-color: #342b29;
         text-align: center;
@@ -210,8 +212,45 @@ section {
     border: 1px solid $wheat-color;
     margin-bottom: 15px;
     // width: calc(100% / 3);
-    img {
-      border-radius: 20px;
+    // img {
+    //   border-radius: 20px;
+    // }
+    .card-img {
+      width: 100%;
+      height: 240px;
+
+      .img {
+        background-repeat: no-repeat;
+        //The transition don't work with a cover value.
+        background-size: 100%;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        transition: all 0.5s ease;
+      }
+      .img-1 {
+        background-image: url("../images/product-1/1.jpg");
+
+        &:hover {
+          background-size: 140%;
+          background-position: right center;
+        }
+      }
+      .img-2 {
+        background-image: url("../images/product-2/1.jpg");
+        &:hover {
+          background-size: 140%;
+          background-position: bottom center;
+        }
+      }
+      .img-3 {
+        background-image: url("../images/product-3/1.jpg");
+        &:hover {
+          background-size: 140%;
+          background-position: left center;
+        }
+      }
     }
     .card-body {
       .card-title {
