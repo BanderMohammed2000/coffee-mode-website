@@ -8,6 +8,7 @@ module.exports = {
     //code splitting
     "js/animate-fadein": "./src/js/animate-fadein.js",
     "js/map": "./src/js/map.js",
+    "js/add-cart": "./src/js/add-cart.js",
   },
   output: {
     publicPath: "/",
@@ -127,6 +128,12 @@ module.exports = {
       template: "./src/distributors.html",
       filename: "distributors.html",
       chunks: ["bundle", "js/map"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/cappuccino-product.html",
+      filename: "cappuccino-product.html",
+      chunks: ["bundle", "js/add-cart"],
     }),
 
     new MiniCssExtractPlugin({

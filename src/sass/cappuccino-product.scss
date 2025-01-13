@@ -1,0 +1,50 @@
+@use "./variables.scss" as *;
+
+.comments {
+  background-color: #211712;
+  .card {
+    background-color: transparent;
+    border: 0;
+    img {
+      width: 70px;
+      height: 70px;
+      border: 1px solid $wheat-color;
+    }
+    .card-body {
+      .card-title,
+      .date {
+        color: $secondary-color;
+      }
+      .card-title {
+        font-size: 17px;
+      }
+      .card-text {
+        color: #e0e0e0;
+        opacity: 0.7;
+        font-size: 14px;
+      }
+      .rating {
+        color: #c2c2c2;
+        .active {
+          color: #f3af41;
+        }
+      }
+    }
+  }
+}
+
+.similar-products {
+  .card {
+    .card-img {
+      .img-nescafe {
+        background-image: url("../images/products/nescafe.jpg");
+      }
+      .img-tea {
+        background-image: url("../images/products/tea.jpg");
+      }
+      .img-latte {
+        background-image: url("../images/products/latte.jpg");
+      }
+    }
+  }
+}
