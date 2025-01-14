@@ -28,40 +28,10 @@ module.exports = {
             },
           },
           "css-loader",
+          "postcss-loader",
           "sass-loader",
         ],
       },
-
-      // {
-      //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
-      //   exclude: /fonts/,
-      //   use: [
-      //     {
-      //       loader: "file-loader",
-
-      //       options: {
-      //         name: "[name].[ext]",
-
-      //         outputPath: "images",
-      //       },
-      //     },
-      //   ],
-      // },
-      // {
-      //   test: /\.(svg|eot|woff|woff2|ttf)$/,
-      //   exclude: /images/,
-      //   use: [
-      //     {
-      //       loader: "file-loader",
-
-      //       options: {
-      //         name: "[name].[ext]",
-
-      //         outputPath: "fonts",
-      //       },
-      //     },
-      //   ],
-      // },
 
       {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
@@ -87,6 +57,17 @@ module.exports = {
       },
 
       {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+
+      {
         test: require.resolve("jquery"),
         loader: "expose-loader",
         options: {
@@ -104,7 +85,6 @@ module.exports = {
     port: 9000,
 
     hot: false,
-    // liveReload: true,
 
     devMiddleware: {
       writeToDisk: true,

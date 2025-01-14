@@ -7,7 +7,7 @@
     background-color: #342019;
     border: 1px solid $wheat-color;
     border-radius: 20px;
-    height: 453px;
+    height: auto;
     .card-body {
       .card-title {
         color: $secondary-color;
@@ -111,15 +111,20 @@
 
 @media (min-width: 767.98px) and (max-width: 991.98px) {
   .about-company {
+    .company-logo {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-company {
     .card {
       .card-body {
         .card-text {
           font-size: 14px;
         }
       }
-    }
-    .company-logo {
-      width: 100%;
     }
   }
 }
