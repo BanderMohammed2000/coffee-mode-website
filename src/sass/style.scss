@@ -206,6 +206,26 @@ section {
   }
 }
 
+.btn-product {
+  display: flex;
+  width: fit-content;
+  border-radius: 50px;
+  background-color: $secondary-color;
+  color: $main-color;
+  transition: all 0.3s ease-in;
+  box-shadow: none;
+
+  &:hover {
+    color: $secondary-color;
+    background-color: $main-color;
+    border: 1px solid $wheat-color;
+  }
+  &:active {
+    border: 1px solid $wheat-color;
+    box-shadow: none;
+  }
+}
+
 .products,
 .similar-products {
   background-color: #271d15;
@@ -264,25 +284,6 @@ section {
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
-      }
-      .btn-product {
-        display: flex;
-        width: fit-content;
-        border-radius: 50px;
-        background-color: $secondary-color;
-        color: $main-color;
-        transition: all 0.3s ease-in;
-        box-shadow: none;
-
-        &:hover {
-          color: $secondary-color;
-          background-color: $main-color;
-          border: 1px solid $wheat-color;
-        }
-        &:active {
-          border: 1px solid $wheat-color;
-          box-shadow: none;
-        }
       }
     }
   }
