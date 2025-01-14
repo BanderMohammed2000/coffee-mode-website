@@ -1,5 +1,6 @@
 import "bootstrap-v5-rtl/dist/js/bundle.min.js";
 import "bootstrap-v5-rtl/dist/css/bootstrap.min.css";
+import "normalize.css";
 import "jquery/dist/jquery.min.js";
 import "popper.js/dist/popper.min";
 import $ from "jquery";
@@ -11,10 +12,8 @@ import "leaflet.awesome-markers/dist/leaflet.awesome-markers.css";
 (function () {
   "use strict";
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll(".needs-validation");
 
-  // Loop over them and prevent submission
   Array.prototype.slice.call(forms).forEach(function (form) {
     form.addEventListener(
       "submit",

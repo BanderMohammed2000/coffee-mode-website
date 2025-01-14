@@ -1,0 +1,13 @@
+@mixin custom-style($bk-color: null, $font-color: null, $border-color: null) {
+  @if $font-color != null {
+    color: $font-color;
+  }
+
+  @if $bk-color != null {
+    background-color: $bk-color;
+  }
+
+  @if $border-color != null {
+    border-color: $border-color !important;
+  }
+}

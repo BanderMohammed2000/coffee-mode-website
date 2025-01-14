@@ -136,6 +136,18 @@ module.exports = {
       chunks: ["bundle", "js/add-cart"],
     }),
 
+    new HtmlWebpackPlugin({
+      template: "./src/coffee-product.html",
+      filename: "coffee-product.html",
+      chunks: ["bundle", "js/add-cart"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/turkish-coffee-product.html",
+      filename: "turkish-coffee-product.html",
+      chunks: ["bundle", "js/add-cart"],
+    }),
+
     new MiniCssExtractPlugin({
       filename: "css/style.css",
     }),
