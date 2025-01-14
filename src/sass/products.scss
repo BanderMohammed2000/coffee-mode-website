@@ -78,6 +78,9 @@ header.carousel-product {
   .card {
     background-color: transparent;
     border: 0;
+    .col-2 {
+      width: auto;
+    }
     img {
       width: 70px;
       height: 70px;
@@ -90,14 +93,17 @@ header.carousel-product {
       }
       .card-title {
         font-size: 17px;
+        margin-right: 12px;
       }
       .card-text {
         color: #e0e0e0;
         opacity: 0.7;
         font-size: 14px;
+        margin-right: 12px;
       }
       .rating {
         color: #c2c2c2;
+        margin-right: 12px;
         .active {
           color: #f3af41;
         }
@@ -205,6 +211,33 @@ header.turkish-coffee {
 
     .btn-product {
       @include custom-style($cream-color, #271d15, $cream-color);
+    }
+  }
+}
+
+/* ------ Responsive ------ */
+
+@media (max-width: 991.98px) {
+  header {
+    .product-images {
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .comments {
+    .card {
+      .col-2 {
+        width: 16.66666667%;
+      }
+      .card-body {
+        .card-title,
+        .card-text,
+        .rating {
+          margin-right: 6px;
+        }
+      }
     }
   }
 }
