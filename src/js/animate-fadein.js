@@ -24,5 +24,5 @@ $(document).ready(function () {
     }
   }
 
-  $(window).on("scroll", fadeIn);
+  $(window).on("scroll touchmove", fadeIn);
 });
