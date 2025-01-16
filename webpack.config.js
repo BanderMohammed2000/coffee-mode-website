@@ -11,9 +11,14 @@ module.exports = {
     "js/add-cart": "./src/js/add-cart.js",
   },
   output: {
-    publicPath: "/",
+    publicPath: "",
     path: path.resolve(__dirname, "build"),
     filename: "[name].js",
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
 
   module: {
