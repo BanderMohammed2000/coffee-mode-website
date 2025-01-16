@@ -154,6 +154,10 @@ section {
   }
 }
 
+.visible {
+  opacity: 1 !important;
+}
+
 .features {
   background-color: #211712;
   .card {
@@ -161,32 +165,27 @@ section {
     border: 2px solid $main-color;
     border-radius: 7px;
     padding: 5px;
-    // position: relative;
     height: 123px;
     .num-section {
       opacity: 0;
       display: flex;
       align-items: center;
-      width: fit-content;
+      width: auto;
       transition: all 0.5s ease-in;
       .num-container {
         background-color: #342b29;
         text-align: center;
         border-radius: 50%;
-        // height: 130px;
-        // width: 130px;
         height: 90px;
         width: 90px;
         span {
           color: #ffffff;
-          // font-size: 85px;
           font-size: 60px;
         }
       }
     }
     .icon {
       position: absolute;
-      // left: -26px;
       left: -15px;
       color: $wheat-color;
       top: 50%;

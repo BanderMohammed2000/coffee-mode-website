@@ -17,7 +17,7 @@ $(document).ready(function () {
       let counter = 500;
       $numSections.each(function (index, element) {
         setTimeout(() => {
-          $(element).css("opacity", 1);
+          $(element).addClass("visible");
         }, counter);
         counter += 500;
       });
