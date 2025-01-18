@@ -46,6 +46,9 @@ nav {
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
   .navbar-toggler {
     color: $secondary-color;
     font-size: 17px;
@@ -76,6 +79,7 @@ nav {
 
 .carousel-top {
   .row {
+    margin-top: 80px;
     display: block !important;
     .carousel-control-next,
     .carousel-control-prev {
@@ -434,6 +438,7 @@ section {
   .features {
     .card {
       .num-section {
+        opacity: 1;
         .num-container {
           height: 80px;
           width: 80px;

@@ -3,6 +3,8 @@
 #map {
   height: 250px;
   width: 100%;
+  z-index: 0;
+  margin-top: 80px;
   .awesome-marker-icon-custom {
     .svg-inline--fa {
       vertical-align: -1em;

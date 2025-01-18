@@ -4,72 +4,75 @@
 header.carousel-product {
   background-color: #271d15;
   padding: 30px 0 20px;
-  #carousel-product-images {
-    .carousel-indicators {
-      position: relative;
-      margin-top: 15px;
-      border-radius: 50% !important;
-    }
-    .carousel-item {
-      img {
-        width: 100%;
-        height: 300px;
-        border: 1px solid;
-        border-radius: 20px;
+  .container {
+    margin-top: 80px;
+    #carousel-product-images {
+      .carousel-indicators {
+        position: relative;
+        margin-top: 15px;
+        border-radius: 50% !important;
+      }
+      .carousel-item {
+        img {
+          width: 100%;
+          height: 300px;
+          border: 1px solid;
+          border-radius: 20px;
+        }
       }
     }
-  }
-  #form-product-selection {
-    h2 {
-      margin: 18px 0;
-      color: $secondary-color;
+    #form-product-selection {
+      h2 {
+        margin: 18px 0;
+        color: $secondary-color;
+      }
     }
-  }
-  .product-description {
-    color: #e0e0e0;
-    opacity: 0.7;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  .price.large {
-    font-size: 30px;
-    margin-top: 20px;
-  }
+    .product-description {
+      color: #e0e0e0;
+      opacity: 0.7;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .price.large {
+      font-size: 30px;
+      margin-top: 20px;
+    }
 
-  .product-quantity {
-    color: $secondary-color;
-    select {
-      height: 45px !important;
-      padding: 6px 12px;
-      margin-right: 5px;
-      width: 20%;
+    .product-quantity {
+      color: $secondary-color;
+      select {
+        height: 45px !important;
+        padding: 6px 12px;
+        margin-right: 5px;
+        width: 20%;
+        border-radius: 10px;
+      }
+    }
+
+    .comments {
+      .comment {
+        img {
+          width: 80px;
+          height: 80px;
+          margin-left: 10px;
+          border: 1px solid #dfdfdf;
+        }
+        h4 {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .custom-carousel-indicators-primary {
+      height: 70px !important;
+      width: 70px !important;
+      opacity: 1 !important;
+      border: 2px solid #dddddb !important;
+      margin: 0 !important;
+      margin-left: 5px !important;
       border-radius: 10px;
     }
-  }
-
-  .comments {
-    .comment {
-      img {
-        width: 80px;
-        height: 80px;
-        margin-left: 10px;
-        border: 1px solid #dfdfdf;
-      }
-      h4 {
-        font-size: 18px;
-        margin-bottom: 5px;
-      }
-    }
-  }
-
-  .custom-carousel-indicators-primary {
-    height: 70px !important;
-    width: 70px !important;
-    opacity: 1 !important;
-    border: 2px solid #dddddb !important;
-    margin: 0 !important;
-    margin-left: 5px !important;
-    border-radius: 10px;
   }
 }
 
@@ -131,6 +134,7 @@ header.carousel-product {
 // cappuccino-product
 
 header.cappuccino {
+  @include custom-style(#271d15, null, null);
   .carousel-item {
     img {
       @include custom-style(null, null, $wheat-color);
@@ -147,6 +151,10 @@ header.cappuccino {
   }
 }
 
+.comments.cappuccino {
+  @include custom-style(#211712, null, null);
+}
+
 .similar-products.cappuccino {
   .card {
     @include custom-style(null, null, $wheat-color);
@@ -160,6 +168,7 @@ header.cappuccino {
 // coffee-product
 
 header.coffee {
+  @include custom-style(#372d23, null, null);
   .carousel-item {
     img {
       @include custom-style(null, null, $bronze-color);
@@ -176,7 +185,13 @@ header.coffee {
   }
 }
 
+.comments.coffee {
+  @include custom-style(#2a1e18, null, null);
+}
+
 .similar-products.coffee {
+  @include custom-style(#372d23, null, null);
+
   .card {
     @include custom-style(null, null, $bronze-color);
 
@@ -189,6 +204,8 @@ header.coffee {
 // turkish-coffee
 
 header.turkish-coffee {
+  @include custom-style(#1b140e, null, null);
+
   .carousel-item {
     img {
       @include custom-style(null, null, $cream-color);
@@ -205,10 +222,14 @@ header.turkish-coffee {
   }
 }
 
+.comments.turkish-coffee {
+  @include custom-style(#1a110e, null, null);
+}
+
 .similar-products.turkish-coffee {
+  @include custom-style(#1b140e, null, null);
   .card {
     @include custom-style(null, null, $cream-color);
-
     .btn-product {
       @include custom-style($cream-color, #271d15, $cream-color);
     }

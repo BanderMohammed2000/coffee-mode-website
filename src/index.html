@@ -10,8 +10,8 @@
       content="مزاج القهوة موقع متخصص في بيع القهوة بأنواعها المختلفة حيث نقدم أجود أصناف القهوة العربية والعالمية لتلبية كافة الأذواق."
     />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <body data-bs-spy="scroll" data-bs-target="#navbar">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
       <div class="container-fluid">
         <a class="navbar-brand me-3" href="#">
           <img src="./images/logo/logo-white.png" alt="مزاج القهوة" />
@@ -34,23 +34,27 @@
         >
           <ul class="navbar-nav align-items-center">
             <li class="nav-item ms-lg-3 me-3 me-lg-0 mb-2 mb-lg-0">
-              <a class="nav-link active" aria-current="page" href="./index.html"
+              <a
+                class="nav-link active"
+                id="home-nav-link"
+                aria-current="page"
+                href="index.html"
                 >الرئيسية</a
               >
             </li>
             <li class="nav-item ms-lg-3 me-3 me-lg-0 mb-2 mb-lg-0">
-              <a class="nav-link" href="#products">المنتجات</a>
+              <a class="nav-link" id="products-nav-link" href="#products"
+                >المنتجات</a
+              >
             </li>
             <li class="nav-item ms-lg-3 me-3 me-lg-0 mb-2 mb-lg-0">
-              <a class="nav-link" href="./distributors.html">الموزعين</a>
+              <a class="nav-link" href="distributors.html">الموزعين</a>
             </li>
             <li class="nav-item ms-lg-3 me-3 me-lg-0 mb-2 mb-lg-0">
-              <a class="nav-link" href="./about.html">عن الشركة</a>
+              <a class="nav-link" href="about.html">عن الشركة</a>
             </li>
             <li class="nav-item me-3 me-lg-0 mb-2 mb-lg-0">
-              <a class="nav-link" href="./about.html#company-info">
-                اتصل بنا
-              </a>
+              <a class="nav-link" href="about.html#company-info"> اتصل بنا </a>
             </li>
           </ul>
         </div>
